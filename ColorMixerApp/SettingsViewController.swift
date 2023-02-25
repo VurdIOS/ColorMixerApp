@@ -37,6 +37,11 @@ final class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        redColorTF.delegate = self
+//        greenColorTF.delegate = self
+//        blueColorTF.delegate = self
+        
+        
         addDoneButtonOnNumpad(textField: redColorTF)
         addDoneButtonOnNumpad(textField: greenColorTF)
         addDoneButtonOnNumpad(textField: blueColorTF)
@@ -63,6 +68,7 @@ final class SettingsViewController: UIViewController {
         delegate.setNewColor(for: colorMixView.backgroundColor ?? .red)
         dismiss(animated: true)
     }
+    
     @IBAction func sliderAction(_ sender: UISlider) {
         setColor()
         switch sender {
@@ -77,6 +83,7 @@ final class SettingsViewController: UIViewController {
             blueColorTF.text = string(from: sender)
         }
     }
+    
     
     // MARK: - private funcs
     
@@ -141,5 +148,13 @@ extension SettingsViewController {
         textField.inputAccessoryView = keypadToolbar
     }
 }
+// MARK: - Проблема
+
+// Вот здесь я встал, и никак не могу назначить значение слайдеру...
+//extension SettingsViewController: UITextFieldDelegate {
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        redColorSlider.value = Float(textField)
+//    }
+//}
 
 
