@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings View Controller-->
+        <!--Set View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="SettingsViewController" customModule="ColorMixerApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="SetViewController" customModule="ColorMixerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,19 +85,19 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PZn-hd-yH8">
                                         <rect key="frame" x="-2" y="0.0" width="214" height="31"/>
                                         <connections>
-                                            <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="TQH-1J-vK9"/>
+                                            <action selector="rgbSliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="LVA-2D-6NT"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gym-Ps-INx">
                                         <rect key="frame" x="-2" y="46" width="214" height="31"/>
                                         <connections>
-                                            <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="7py-Sv-PBe"/>
+                                            <action selector="rgbSliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="9Zc-83-D13"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wCi-EG-SLV">
                                         <rect key="frame" x="-2" y="92" width="214" height="31"/>
                                         <connections>
-                                            <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="6yz-th-l4w"/>
+                                            <action selector="rgbSliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="DdL-qM-Ytv"/>
                                         </connections>
                                     </slider>
                                 </subviews>
@@ -112,7 +112,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
-                                    <action selector="DoneButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="roh-fI-wU9"/>
+                                    <action selector="doneButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="F5d-oU-g2d"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jd7-fC-QOh">
@@ -156,26 +156,26 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="GreenColorSlider" destination="gym-Ps-INx" id="LFD-yo-W6q"/>
-                        <outlet property="blueColorLabel" destination="stj-An-4X0" id="JAg-Cg-RjJ"/>
-                        <outlet property="blueColorSlider" destination="wCi-EG-SLV" id="6Io-VE-d6J"/>
-                        <outlet property="blueColorTF" destination="Grc-ex-fnu" id="8fg-2U-1ez"/>
-                        <outlet property="colorMixView" destination="NAA-C0-yta" id="6qd-7P-mQc"/>
-                        <outlet property="greenColorLabel" destination="zmc-Mw-xKT" id="Hk5-6y-0aw"/>
-                        <outlet property="greenColorTF" destination="3eR-qy-1o3" id="9zT-Fe-cox"/>
-                        <outlet property="redColorLabel" destination="3sk-Wj-EQ6" id="pnS-AJ-vfh"/>
-                        <outlet property="redColorSlider" destination="PZn-hd-yH8" id="3nX-El-Tyd"/>
-                        <outlet property="redColorTF" destination="dh1-H8-IQb" id="eDP-Av-l5g"/>
+                        <outlet property="blueColorLabel" destination="stj-An-4X0" id="V5E-OV-MqN"/>
+                        <outlet property="blueColorSlider" destination="wCi-EG-SLV" id="fjf-Ju-7Zj"/>
+                        <outlet property="blueColorTF" destination="Grc-ex-fnu" id="so8-kB-MYh"/>
+                        <outlet property="colorMixView" destination="NAA-C0-yta" id="3Qm-50-sRI"/>
+                        <outlet property="greenColorLabel" destination="zmc-Mw-xKT" id="E6n-tg-CI8"/>
+                        <outlet property="greenColorSlider" destination="gym-Ps-INx" id="pI0-Cx-Wkp"/>
+                        <outlet property="greenColorTF" destination="3eR-qy-1o3" id="fQL-oP-Hzr"/>
+                        <outlet property="redColorLabel" destination="3sk-Wj-EQ6" id="ua0-bn-LFT"/>
+                        <outlet property="redColorSlider" destination="PZn-hd-yH8" id="laz-ej-3ge"/>
+                        <outlet property="redColorTF" destination="dh1-H8-IQb" id="4e6-f6-AaT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="154.96183206106869" y="23.943661971830988"/>
         </scene>
-        <!--Color View Controller-->
+        <!--Coloring View Controller-->
         <scene sceneID="srZ-Ov-3J7">
             <objects>
-                <viewController id="GDN-PE-b0p" customClass="ColorViewController" customModule="ColorMixerApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GDN-PE-b0p" customClass="ColoringViewController" customModule="ColorMixerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hks-R8-U6g">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,7 +185,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="Geg-II-91I"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="ed9-0g-pm3"/>
                                 </connections>
                             </button>
                         </subviews>
